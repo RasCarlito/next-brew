@@ -11,6 +11,7 @@ class CustomDocument extends Document {
       <html>
         <Head>
           <link rel='stylesheet' href='/static/css/bulma.min.css' />
+          <link rel='stylesheet' href='/static/css/nprogress.css' />
           <link rel='stylesheet' href='/static/font-awesome/css/font-awesome.min.css' />
           <link rel='stylesheet' href='/_next/static/style.css' />
         </Head>

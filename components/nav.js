@@ -2,6 +2,8 @@ import { Navbar } from 'react-bulma-components'
 import Link from 'next/link'
 import Icon from './icon'
 
+import './nav.scss'
+
 const { Brand, Item, Burger, Menu, Container } = Navbar
 
 const NavbarComponent = () => (
