@@ -4,7 +4,7 @@
   "description": "Brewdogs Punk API view using Next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start",
     "lint": "standard | snazzy",
@@ -18,7 +18,12 @@
   "license": "MIT",
   "dependencies": {
     "@zeit/next-sass": "^0.2.0",
+    "axios": "^0.18.0",
+    "axios-cache-adapter": "^2.1.0",
     "classnames": "^2.2.6",
+    "localforage": "^1.7.2",
+    "localforage-memoryStorageDriver": "^0.9.2",
+    "lodash": "^4.17.10",
     "next": "^6.0.3",
     "node-sass": "^4.9.0",
     "nprogress": "^0.2.0",
