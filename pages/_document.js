@@ -15,7 +15,7 @@ class CustomDocument extends Document {
 
           <title>Next Brew</title>
 
-          <meta key='description' name='description' content='A Next.js application listing Brewdogs beers using the Punk API' />,
+          <meta key='description' name='description' content='A Next.js application listing Brewdogs beers using the Punk API' />
 
           <link rel='stylesheet' href='/static/css/bulma.min.css' />
           <link rel='stylesheet' href='/static/css/nprogress.css' />
