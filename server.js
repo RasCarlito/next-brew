@@ -5,10 +5,11 @@ const next = require('next')
 const withSass = require('@zeit/next-sass')
 
 const dev = process.env.NODE_ENV !== 'production'
+const port = dev ? 3000 : 6661
 const app = next({ dev, conf: withSass() })
 const handle = app.getRequestHandler()
 
-const beerPath = /\/beer\/(\d+)$/
+const beerPath = /^\/beer\/(\d+)$/
 
 app.prepare().then(() => {
   createServer((req, res) => {
@@ -22,8 +23,8 @@ app.prepare().then(() => {
     } else {
       handle(req, res, parsedUrl)
     }
-  }).listen(3000, err => {
+  }).listen(port, err => {
     if (err) throw err
-    console.log('> Ready on http://localhost:3000')
+    console.log(`> Ready on http://localhost:${port}`)
   })
 })

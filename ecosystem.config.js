@@ -24,8 +24,8 @@ module.exports = {
       host: 'next-brew.carlogren.com',
       ref: 'origin/master',
       repo: 'git@github.com:RasCarlito/next-brew.git',
-      path: '/home/rascarlito/www/next-brew'
-      // 'post-deploy': 'nvm use && npm install && npm run build && npm run pm2-restart'
+      path: '/home/rascarlito/www/next-brew',
+      'post-deploy': 'nvm use && npm install && npm run build && npm run pm2-restart'
     }
   }
 }
