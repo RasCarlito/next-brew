@@ -62,7 +62,12 @@ class BeersPage extends Component {
       let beers = this.props.beers
 
       if (search) {
-        beers = filter(this.props.beers, beer => beer.name.toLowerCase().includes(search))
+        beers = filter(
+          this.props.beers,
+          beer => beer.name.toLowerCase().includes(
+            search.toLowerCase()
+          )
+        )
       }
 
       return { search, beers }
