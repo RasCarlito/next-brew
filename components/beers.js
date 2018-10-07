@@ -22,6 +22,7 @@ const Beer = ({ beer }) => {
               </Media.Item>
             </Media>
             <Content style={{ fontSize: '.8rem' }}>
+              <img className='beer-card-image' src={beer.image_url} />
               {beer.description}
             </Content>
           </Card.Content>

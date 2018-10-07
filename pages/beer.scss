@@ -3,3 +3,26 @@
   float: left;
   padding-right: 1rem;
 }
+
+.food-pairing {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.hops-container {
+  display: flex;
+  justify-content: space-between;
+
+  fieldset {
+    padding: 1rem;
+
+    legend {
+      padding-left: .5rem;
+      padding-right: .5rem;
+    }
+  }
+
+  @media screen and (max-width: 736px) {
+    flex-direction: column;
+  }
+}

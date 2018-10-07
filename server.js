@@ -2,11 +2,11 @@ const { createServer } = require('http')
 const { parse } = require('url')
 const next = require('next')
 
-const withSass = require('@zeit/next-sass')
+const nextConfig = require('./next.config')
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = dev ? 3000 : 6661
-const app = next({ dev, conf: withSass() })
+const app = next({ dev, conf: nextConfig })
 const handle = app.getRequestHandler()
 
 const beerPath = /^\/beer\/(\d+)$/
@@ -19,7 +19,8 @@ app.prepare().then(() => {
     const matches = pathname.match(beerPath)
 
     if (matches) {
-      app.render(req, res, '/beer', { id: matches[1], ...query })
+      const [, id] = matches
+      app.render(req, res, '/beer', { id, ...query })
     } else {
       handle(req, res, parsedUrl)
     }
