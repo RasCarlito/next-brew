@@ -29,3 +29,6 @@ app.prepare().then(() => {
     console.log(`> Ready on http://localhost:${port}`)
   })
 })
+
+console.log('Server started')
+
